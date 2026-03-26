@@ -4,6 +4,11 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/',
+    component: ComponentCreator('/', '2e1'),
+    exact: true
+  },
+  {
+    path: '/',
     component: ComponentCreator('/', '8a4'),
     routes: [
       {
