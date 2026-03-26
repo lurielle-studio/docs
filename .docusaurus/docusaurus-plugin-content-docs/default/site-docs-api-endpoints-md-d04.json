@@ -1,0 +1,23 @@
+{
+  "id": "api/endpoints",
+  "title": "Endpoints",
+  "description": "API Endpoints for interacting with Cortana resources",
+  "source": "@site/docs/api/endpoints.md",
+  "sourceDirName": "api",
+  "slug": "/api/endpoints",
+  "permalink": "/api/endpoints",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/lurielle-studio/docs/tree/main/docs/api/endpoints.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {
+    "title": "Endpoints",
+    "description": "API Endpoints for interacting with Cortana resources"
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "API Overview",
+    "permalink": "/api/overview"
+  }
+}

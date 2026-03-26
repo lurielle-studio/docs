@@ -1,0 +1,24 @@
+{
+  "id": "agent-system/channels",
+  "title": "Channels",
+  "description": "Channels provide communication interfaces for agents.",
+  "source": "@site/docs/agent-system/channels.md",
+  "sourceDirName": "agent-system",
+  "slug": "/agent-system/channels",
+  "permalink": "/agent-system/channels",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/lurielle-studio/docs/tree/main/docs/agent-system/channels.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Agent System Overview",
+    "permalink": "/agent-system/overview"
+  },
+  "next": {
+    "title": "Tasks",
+    "permalink": "/agent-system/tasks"
+  }
+}

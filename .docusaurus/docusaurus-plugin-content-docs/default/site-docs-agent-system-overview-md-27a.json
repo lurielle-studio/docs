@@ -1,0 +1,24 @@
+{
+  "id": "agent-system/overview",
+  "title": "Agent System Overview",
+  "description": "The Agent System is the core of Cortana's intelligence capabilities.",
+  "source": "@site/docs/agent-system/overview.md",
+  "sourceDirName": "agent-system",
+  "slug": "/agent-system/overview",
+  "permalink": "/agent-system/overview",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/lurielle-studio/docs/tree/main/docs/agent-system/overview.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Core Concepts",
+    "permalink": "/core-concepts"
+  },
+  "next": {
+    "title": "Channels",
+    "permalink": "/agent-system/channels"
+  }
+}

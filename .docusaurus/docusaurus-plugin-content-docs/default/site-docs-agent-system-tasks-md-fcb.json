@@ -1,0 +1,24 @@
+{
+  "id": "agent-system/tasks",
+  "title": "Tasks",
+  "description": "Tasks represent discrete units of work in Cortana.",
+  "source": "@site/docs/agent-system/tasks.md",
+  "sourceDirName": "agent-system",
+  "slug": "/agent-system/tasks",
+  "permalink": "/agent-system/tasks",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/lurielle-studio/docs/tree/main/docs/agent-system/tasks.md",
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "docs",
+  "previous": {
+    "title": "Channels",
+    "permalink": "/agent-system/channels"
+  },
+  "next": {
+    "title": "API Overview",
+    "permalink": "/api/overview"
+  }
+}

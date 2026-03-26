@@ -1,0 +1,63 @@
+{
+  "docusaurus-plugin-content-docs": {
+    "default": {
+      "path": "/",
+      "versions": [
+        {
+          "name": "current",
+          "label": "Next",
+          "isLast": true,
+          "path": "/",
+          "mainDocId": "getting-started",
+          "docs": [
+            {
+              "id": "agent-system/channels",
+              "path": "/agent-system/channels",
+              "sidebar": "docs"
+            },
+            {
+              "id": "agent-system/overview",
+              "path": "/agent-system/overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "agent-system/tasks",
+              "path": "/agent-system/tasks",
+              "sidebar": "docs"
+            },
+            {
+              "id": "api/endpoints",
+              "path": "/api/endpoints",
+              "sidebar": "docs"
+            },
+            {
+              "id": "api/overview",
+              "path": "/api/overview",
+              "sidebar": "docs"
+            },
+            {
+              "id": "core-concepts",
+              "path": "/core-concepts",
+              "sidebar": "docs"
+            },
+            {
+              "id": "getting-started",
+              "path": "/getting-started",
+              "sidebar": "docs"
+            }
+          ],
+          "draftIds": [],
+          "sidebars": {
+            "docs": {
+              "link": {
+                "path": "/getting-started",
+                "label": "Getting Started"
+              }
+            }
+          }
+        }
+      ],
+      "breadcrumbs": true
+    }
+  }
+}
