@@ -4,46 +4,50 @@
  * Modify the docusaurus.config.js file at your site's root instead.
  */
 export default {
-  "title": "Cortana",
-  "tagline": "Intelligent Agent Platform",
+  "title": "Cortana Documentation",
+  "tagline": "Autonomous AI Agent Framework",
   "favicon": "img/favicon.ico",
   "url": "https://docs.cortana.dev",
   "baseUrl": "/",
-  "organizationName": "lurielle-studio",
+  "organizationName": "cortana",
   "projectName": "docs",
-  "onBrokenLinks": "throw",
-  "i18n": {
-    "defaultLocale": "en",
-    "locales": [
-      "en"
-    ],
-    "path": "i18n",
-    "localeConfigs": {}
+  "markdown": {
+    "hooks": {
+      "onBrokenMarkdownLinks": "warn",
+      "onBrokenMarkdownImages": "throw"
+    },
+    "format": "mdx",
+    "mermaid": false,
+    "emoji": true,
+    "mdx1Compat": {
+      "comments": true,
+      "admonitions": true,
+      "headingIds": true
+    },
+    "anchors": {
+      "maintainCase": false
+    }
   },
+  "onBrokenAnchors": "warn",
   "presets": [
     [
       "classic",
       {
         "docs": {
           "routeBasePath": "/",
-          "sidebarPath": "/workspace/sidebars.js",
-          "editUrl": "https://github.com/lurielle-studio/docs/tree/main/"
+          "sidebarPath": "./sidebars.js",
+          "editUrl": "https://github.com/cortana/docs/edit/main/"
         },
         "blog": false,
         "theme": {
-          "customCss": "/workspace/src/css/custom.css"
+          "customCss": "./src/css/custom.css"
         }
       }
     ]
   ],
   "themeConfig": {
-    "image": "img/cortana-social-card.png",
     "navbar": {
-      "title": "Cortana",
-      "logo": {
-        "alt": "Cortana Logo",
-        "src": "img/logo.svg"
-      },
+      "title": "Cortana Docs",
       "items": [
         {
           "type": "docSidebar",
@@ -52,7 +56,7 @@ export default {
           "label": "Documentation"
         },
         {
-          "href": "https://github.com/lurielle-studio/docs",
+          "href": "https://github.com/cortana",
           "label": "GitHub",
           "position": "right"
         }
@@ -80,12 +84,12 @@ export default {
           "items": [
             {
               "label": "GitHub",
-              "href": "https://github.com/lurielle-studio/docs"
+              "href": "https://github.com/cortana"
             }
           ]
         }
       ],
-      "copyright": "Copyright © 2026 Lurielle Studio. Built with Docusaurus."
+      "copyright": "Copyright © 2026 Cortana Project."
     },
     "prism": {
       "theme": {
@@ -280,11 +284,10 @@ export default {
         ]
       },
       "additionalLanguages": [
-        "bash",
         "elixir",
-        "javascript",
-        "json",
-        "markdown"
+        "typescript",
+        "bash",
+        "json"
       ],
       "magicComments": [
         {
@@ -298,14 +301,9 @@ export default {
       ]
     },
     "colorMode": {
-      "defaultMode": "dark",
-      "respectPrefersColorScheme": true,
-      "disableSwitch": false
-    },
-    "markdown": {
-      "hooks": {
-        "onBrokenMarkdownLinks": "warn"
-      }
+      "defaultMode": "light",
+      "disableSwitch": false,
+      "respectPrefersColorScheme": false
     },
     "docs": {
       "versionPersistence": "localStorage",
@@ -326,6 +324,14 @@ export default {
     }
   },
   "baseUrlIssueBanner": true,
+  "i18n": {
+    "defaultLocale": "en",
+    "path": "i18n",
+    "locales": [
+      "en"
+    ],
+    "localeConfigs": {}
+  },
   "future": {
     "v4": {
       "removeLegacyPostBuildHeadAttribute": false,
@@ -347,7 +353,7 @@ export default {
     },
     "experimental_router": "browser"
   },
-  "onBrokenAnchors": "warn",
+  "onBrokenLinks": "throw",
   "onDuplicateRoutes": "warn",
   "staticDirectories": [
     "static"
@@ -360,22 +366,5 @@ export default {
   "stylesheets": [],
   "clientModules": [],
   "titleDelimiter": "|",
-  "noIndex": false,
-  "markdown": {
-    "format": "mdx",
-    "mermaid": false,
-    "emoji": true,
-    "mdx1Compat": {
-      "comments": true,
-      "admonitions": true,
-      "headingIds": true
-    },
-    "anchors": {
-      "maintainCase": false
-    },
-    "hooks": {
-      "onBrokenMarkdownLinks": "warn",
-      "onBrokenMarkdownImages": "throw"
-    }
-  }
+  "noIndex": false
 };

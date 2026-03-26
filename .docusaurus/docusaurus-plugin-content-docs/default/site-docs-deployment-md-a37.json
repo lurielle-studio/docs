@@ -1,0 +1,26 @@
+{
+  "id": "deployment",
+  "title": "Deploy & Publish",
+  "description": "Deploy Cortana to production environments.",
+  "source": "@site/docs/deployment.md",
+  "sourceDirName": ".",
+  "slug": "/deployment",
+  "permalink": "/deployment",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/cortana/docs/edit/main/docs/deployment.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 8,
+  "frontMatter": {
+    "slug": "/deployment",
+    "sidebar_position": 8,
+    "title": "Deploy & Publish",
+    "description": "Deploy Cortana to production environments."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Administration Guide",
+    "permalink": "/administration"
+  }
+}

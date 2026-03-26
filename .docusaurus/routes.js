@@ -4,16 +4,27 @@ import ComponentCreator from '@docusaurus/ComponentCreator';
 export default [
   {
     path: '/',
-    component: ComponentCreator('/', '8a4'),
+    component: ComponentCreator('/', '2e1'),
+    exact: true
+  },
+  {
+    path: '/',
+    component: ComponentCreator('/', 'f5c'),
     routes: [
       {
         path: '/',
-        component: ComponentCreator('/', '8e9'),
+        component: ComponentCreator('/', '2fa'),
         routes: [
           {
             path: '/',
-            component: ComponentCreator('/', '0dd'),
+            component: ComponentCreator('/', '828'),
             routes: [
+              {
+                path: '/administration',
+                component: ComponentCreator('/administration', '0cc'),
+                exact: true,
+                sidebar: "docs"
+              },
               {
                 path: '/agent-system/channels',
                 component: ComponentCreator('/agent-system/channels', '208'),
@@ -34,15 +45,13 @@ export default [
               },
               {
                 path: '/api/endpoints',
-                component: ComponentCreator('/api/endpoints', '93e'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/api/endpoints', 'd55'),
+                exact: true
               },
               {
                 path: '/api/overview',
-                component: ComponentCreator('/api/overview', 'd47'),
-                exact: true,
-                sidebar: "docs"
+                component: ComponentCreator('/api/overview', '8fb'),
+                exact: true
               },
               {
                 path: '/core-concepts',
@@ -51,10 +60,27 @@ export default [
                 sidebar: "docs"
               },
               {
+                path: '/deployment',
+                component: ComponentCreator('/deployment', 'ae7'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
                 path: '/getting-started',
                 component: ComponentCreator('/getting-started', 'ac2'),
                 exact: true,
                 sidebar: "docs"
+              },
+              {
+                path: '/mcp-integrations',
+                component: ComponentCreator('/mcp-integrations', '8ab'),
+                exact: true,
+                sidebar: "docs"
+              },
+              {
+                path: '/mdx-test',
+                component: ComponentCreator('/mdx-test', 'c68'),
+                exact: true
               }
             ]
           }

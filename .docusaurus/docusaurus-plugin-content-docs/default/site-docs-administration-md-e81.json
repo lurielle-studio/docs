@@ -1,0 +1,30 @@
+{
+  "id": "administration",
+  "title": "Administration Guide",
+  "description": "Configure and manage your Cortana deployment.",
+  "source": "@site/docs/administration.md",
+  "sourceDirName": ".",
+  "slug": "/administration",
+  "permalink": "/administration",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/cortana/docs/edit/main/docs/administration.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 7,
+  "frontMatter": {
+    "slug": "/administration",
+    "sidebar_position": 7,
+    "title": "Administration Guide",
+    "description": "Configure and manage your Cortana deployment."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "MCP & Integrations",
+    "permalink": "/mcp-integrations"
+  },
+  "next": {
+    "title": "Deploy & Publish",
+    "permalink": "/deployment"
+  }
+}

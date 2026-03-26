@@ -11,6 +11,11 @@
           "mainDocId": "getting-started",
           "docs": [
             {
+              "id": "administration",
+              "path": "/administration",
+              "sidebar": "docs"
+            },
+            {
               "id": "agent-system/channels",
               "path": "/agent-system/channels",
               "sidebar": "docs"
@@ -27,13 +32,11 @@
             },
             {
               "id": "api/endpoints",
-              "path": "/api/endpoints",
-              "sidebar": "docs"
+              "path": "/api/endpoints"
             },
             {
               "id": "api/overview",
-              "path": "/api/overview",
-              "sidebar": "docs"
+              "path": "/api/overview"
             },
             {
               "id": "core-concepts",
@@ -41,9 +44,23 @@
               "sidebar": "docs"
             },
             {
+              "id": "deployment",
+              "path": "/deployment",
+              "sidebar": "docs"
+            },
+            {
               "id": "getting-started",
               "path": "/getting-started",
               "sidebar": "docs"
+            },
+            {
+              "id": "mcp-integrations",
+              "path": "/mcp-integrations",
+              "sidebar": "docs"
+            },
+            {
+              "id": "mdx-test",
+              "path": "/mdx-test"
             }
           ],
           "draftIds": [],
@@ -51,7 +68,7 @@
             "docs": {
               "link": {
                 "path": "/getting-started",
-                "label": "Getting Started"
+                "label": "getting-started"
               }
             }
           }

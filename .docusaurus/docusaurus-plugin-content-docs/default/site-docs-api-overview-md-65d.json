@@ -8,17 +8,8 @@
   "permalink": "/api/overview",
   "draft": false,
   "unlisted": false,
-  "editUrl": "https://github.com/lurielle-studio/docs/tree/main/docs/api/overview.md",
+  "editUrl": "https://github.com/cortana/docs/edit/main/docs/api/overview.md",
   "tags": [],
   "version": "current",
-  "frontMatter": {},
-  "sidebar": "docs",
-  "previous": {
-    "title": "Tasks",
-    "permalink": "/agent-system/tasks"
-  },
-  "next": {
-    "title": "Endpoints",
-    "permalink": "/api/endpoints"
-  }
+  "frontMatter": {}
 }

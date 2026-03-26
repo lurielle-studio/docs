@@ -1,16 +1,27 @@
 {
-  "/-8a4": {
+  "/-2e1": {
+    "__comp": "c4f5d8e4",
+    "__context": {
+      "plugin": "a7456010"
+    },
+    "config": "5e9f5e1a"
+  },
+  "/-f5c": {
     "__comp": "5e95c892",
     "__context": {
       "plugin": "aba21aa0"
     }
   },
-  "/-8e9": {
+  "/-2fa": {
     "__comp": "a7bd4aaa",
     "__props": "22dd74f7"
   },
-  "/-0dd": {
+  "/-828": {
     "__comp": "a94703ab"
+  },
+  "/administration-0cc": {
+    "__comp": "17896441",
+    "content": "e8193bc1"
   },
   "/agent-system/channels-208": {
     "__comp": "17896441",
@@ -24,11 +35,11 @@
     "__comp": "17896441",
     "content": "fcbd9903"
   },
-  "/api/endpoints-93e": {
+  "/api/endpoints-d55": {
     "__comp": "17896441",
     "content": "d04023df"
   },
-  "/api/overview-d47": {
+  "/api/overview-8fb": {
     "__comp": "17896441",
     "content": "65df3d35"
   },
@@ -36,8 +47,20 @@
     "__comp": "17896441",
     "content": "43cd4838"
   },
+  "/deployment-ae7": {
+    "__comp": "17896441",
+    "content": "a3713279"
+  },
   "/getting-started-ac2": {
     "__comp": "17896441",
     "content": "d589d3a7"
+  },
+  "/mcp-integrations-8ab": {
+    "__comp": "17896441",
+    "content": "cb6c95a5"
+  },
+  "/mdx-test-c68": {
+    "__comp": "17896441",
+    "content": "0636fb62"
   }
 }

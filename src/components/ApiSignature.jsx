@@ -1,63 +1,114 @@
-/**
- * API Signature Component
- * Displays API endpoint with method badge, path, and optional parameters table
- * Semantic HTML for accessibility
- */
-
-import React from 'react';
-import clsx from 'clsx';
-
-const METHOD_STYLES = {
-  GET: 'api-method--get',
-  POST: 'api-method--post',
-  PUT: 'api-method--put',
-  PATCH: 'api-method--put',
-  DELETE: 'api-method--delete',
-};
+import React, { useState } from 'react';
 
 /**
- * @param {Object} props
- * @param {'GET'|'POST'|'PUT'|'PATCH'|'DELETE'} props.method - HTTP method
- * @param {string} props.path - API endpoint path
- * @param {string} [props.description] - Brief description
- * @param {Array<{name: string, type: string, required?: boolean, description?: string}>} [props.params] - Parameters
+ * API Signature component for documenting endpoints
  */
-export default function ApiSignature({ method = 'GET', path, description, params = [] }) {
-  const methodClass = METHOD_STYLES[method] || 'api-method--get';
+export default function ApiSignature({ method, path, description, params = [] }) {
+  const [expanded, setExpanded] = useState(false);
+  
+  const methodColors = {
+    GET: { bg: '#dbeafe', text: '#1d4ed8' },
+    POST: { bg: '#d1fae5', text: '#065f46' },
+    PATCH: { bg: '#fef3c7', text: '#92400e' },
+    PUT: { bg: '#fef3c7', text: '#92400e' },
+    DELETE: { bg: '#fee2e2', text: '#991b1b' },
+  };
+
+  const colors = methodColors[method] || methodColors.GET;
 
   return (
-    <section className="api-signature" aria-label={`${method} ${path}`}>
-      <div className="api-signature-header">
-        <span className={clsx('api-method', methodClass)}>{method}</span>
-        <code className="api-path">{path}</code>
+    <div style={{
+      border: '1px solid var(--border-color-default, #e5e7eb)',
+      borderRadius: '0.5rem',
+      marginBottom: '1.5rem',
+      overflow: 'hidden',
+    }}>
+      {/* Header */}
+      <div style={{
+        display: 'flex',
+        alignItems: 'center',
+        gap: '1rem',
+        padding: '1rem',
+        backgroundColor: 'var(--color-neutral-50, #f9fafb)',
+        borderBottom: expanded ? '1px solid var(--border-color-default, #e5e7eb)' : 'none',
+        cursor: 'pointer',
+      }}
+      onClick={() => setExpanded(!expanded)}
+      >
+        <span style={{
+          backgroundColor: colors.bg,
+          color: colors.text,
+          padding: '0.25rem 0.75rem',
+          borderRadius: '0.25rem',
+          fontFamily: 'var(--font-family-mono, monospace)',
+          fontWeight: 600,
+          fontSize: '0.875rem',
+        }}>
+          {method}
+        </span>
+        <code style={{
+          fontFamily: 'var(--font-family-mono, monospace)',
+          fontSize: '0.95rem',
+        }}>
+          {path}
+        </code>
+        <span style={{
+          marginLeft: 'auto',
+          fontSize: '1.25rem',
+        }}>
+          {expanded ? '▼' : '▶'}
+        </span>
       </div>
-      {description && <p className="api-description">{description}</p>}
-      
-      {params.length > 0 && (
-        <div className="api-params">
-          <h4 className="api-params-title">Parameters</h4>
-          <table className="api-params-table">
-            <thead>
-              <tr>
-                <th>Name</th>
-                <th>Type</th>
-                <th>Required</th>
-                <th>Description</th>
-              </tr>
-            </thead>
-            <tbody>
-              {params.map((param) => (
-                <tr key={param.name}>
-                  <td><code>{param.name}</code></td>
-                  <td><code>{param.type}</code></td>
-                  <td>{param.required ? 'Yes' : 'No'}</td>
-                  <td>{param.description || '-'}</td>
+
+      {/* Description */}
+      <div style={{ padding: '1rem' }}>
+        <p style={{ margin: '0 0 1rem 0' }}>{description}</p>
+
+        {/* Parameters Table */}
+        {expanded && params.length > 0 && (
+          <div style={{ marginTop: '1rem' }}>
+            <h4 style={{ marginBottom: '0.5rem', fontSize: '0.875rem', fontWeight: 600 }}>
+              Parameters
+            </h4>
+            <table style={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              fontSize: '0.875rem',
+            }}>
+              <thead>
+                <tr style={{ borderBottom: '2px solid var(--border-color-default, #e5e7eb)' }}>
+                  <th style={{ textAlign: 'left', padding: '0.5rem' }}>Name</th>
+                  <th style={{ textAlign: 'left', padding: '0.5rem' }}>Type</th>
+                  <th style={{ textAlign: 'left', padding: '0.5rem' }}>Required</th>
+                  <th style={{ textAlign: 'left', padding: '0.5rem' }}>Description</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      )}
-    </section>
+              </thead>
+              <tbody>
+                {params.map((param, idx) => (
+                  <tr key={idx} style={{ borderBottom: '1px solid var(--border-color-default, #e5e7eb)' }}>
+                    <td style={{ padding: '0.5rem' }}>
+                      <code>{param.name}</code>
+                    </td>
+                    <td style={{ padding: '0.5rem' }}>
+                      <code style={{ color: 'var(--color-primary-600, #2563eb)' }}>
+                        {param.type}
+                      </code>
+                    </td>
+                    <td style={{ padding: '0.5rem' }}>
+                      {param.required ? (
+                        <span style={{ color: 'var(--color-error, #ef4444)' }}>Yes</span>
+                      ) : (
+                        <span style={{ color: 'var(--color-neutral-500, #6b7280)' }}>No</span>
+                      )}
+                    </td>
+                    <td style={{ padding: '0.5rem' }}>{param.description}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        )}
+      </div>
+    </div>
   );
 }

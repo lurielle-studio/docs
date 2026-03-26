@@ -1,0 +1,30 @@
+{
+  "id": "mcp-integrations",
+  "title": "MCP & Integrations",
+  "description": "Connect Cortana to external tools and services via MCP.",
+  "source": "@site/docs/mcp-integrations.md",
+  "sourceDirName": ".",
+  "slug": "/mcp-integrations",
+  "permalink": "/mcp-integrations",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/cortana/docs/edit/main/docs/mcp-integrations.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 5,
+  "frontMatter": {
+    "slug": "/mcp-integrations",
+    "sidebar_position": 5,
+    "title": "MCP & Integrations",
+    "description": "Connect Cortana to external tools and services via MCP."
+  },
+  "sidebar": "docs",
+  "previous": {
+    "title": "Tasks",
+    "permalink": "/agent-system/tasks"
+  },
+  "next": {
+    "title": "Administration Guide",
+    "permalink": "/administration"
+  }
+}

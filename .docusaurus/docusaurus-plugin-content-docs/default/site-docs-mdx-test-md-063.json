@@ -1,0 +1,21 @@
+{
+  "id": "mdx-test",
+  "title": "MDX Test Page",
+  "description": "Testing MDX components and functionality",
+  "source": "@site/docs/mdx-test.md",
+  "sourceDirName": ".",
+  "slug": "/mdx-test",
+  "permalink": "/mdx-test",
+  "draft": false,
+  "unlisted": false,
+  "editUrl": "https://github.com/cortana/docs/edit/main/docs/mdx-test.md",
+  "tags": [],
+  "version": "current",
+  "sidebarPosition": 99,
+  "frontMatter": {
+    "slug": "/mdx-test",
+    "sidebar_position": 99,
+    "title": "MDX Test Page",
+    "description": "Testing MDX components and functionality"
+  }
+}

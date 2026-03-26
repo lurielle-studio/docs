@@ -1,21 +1,28 @@
-const prismReactRenderer = require('prism-react-renderer');
-const prismThemes = prismReactRenderer.themes;
+import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Cortana',
-  tagline: 'Intelligent Agent Platform',
+  title: 'Cortana Documentation',
+  tagline: 'Autonomous AI Agent Framework',
   favicon: 'img/favicon.ico',
+
+  // GitHub Pages config
   url: 'https://docs.cortana.dev',
   baseUrl: '/',
-  organizationName: 'lurielle-studio',
+
+  // GitHub deployment
+  organizationName: 'cortana',
   projectName: 'docs',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+
+  // MDX configuration
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
   },
+
+  onBrokenAnchors: 'warn',
+
   presets: [
     [
       'classic',
@@ -23,26 +30,22 @@ const config = {
       ({
         docs: {
           routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/lurielle-studio/docs/tree/main/',
+          sidebarPath: './sidebars.js',
+          editUrl: 'https://github.com/cortana/docs/edit/main/',
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: './src/css/custom.css',
         },
       }),
     ],
   ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/cortana-social-card.png',
       navbar: {
-        title: 'Cortana',
-        logo: {
-          alt: 'Cortana Logo',
-          src: 'img/logo.svg',
-        },
+        title: 'Cortana Docs',
         items: [
           {
             type: 'docSidebar',
@@ -51,7 +54,7 @@ const config = {
             label: 'Documentation',
           },
           {
-            href: 'https://github.com/lurielle-studio/docs',
+            href: 'https://github.com/cortana',
             label: 'GitHub',
             position: 'right',
           },
@@ -78,28 +81,19 @@ const config = {
             items: [
               {
                 label: 'GitHub',
-                href: 'https://github.com/lurielle-studio/docs',
+                href: 'https://github.com/cortana',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} Lurielle Studio. Built with Docusaurus.`,
+        copyright: `Copyright © ${new Date().getFullYear()} Cortana Project.`,
       },
       prism: {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
-        additionalLanguages: ['bash', 'elixir', 'javascript', 'json', 'markdown'],
-      },
-      colorMode: {
-        defaultMode: 'dark',
-        respectPrefersColorScheme: true,
-      },
-      markdown: {
-        hooks: {
-          onBrokenMarkdownLinks: 'warn',
-        },
+        additionalLanguages: ['elixir', 'typescript', 'bash', 'json'],
       },
     }),
 };
 
-module.exports = config;
+export default config;
